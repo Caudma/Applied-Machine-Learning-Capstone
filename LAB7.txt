@@ -113,17 +113,3 @@ def update_scatter_chart(selected_site, payload_range):
 if __name__ == '__main__':
     app.run_server()
 
-TASK 4
-Create a logistic regression object then create a GridSearchCV object logreg_cv with cv = 10. Fit the object to find the best parameters from the dictionary parameters.
-
-parameters ={'C':[0.01,0.1,1],
-             'penalty':['l2'],
-             'solver':['lbfgs']}
-
-parameters ={"C":[0.01,0.1,1],'penalty':['l2'], 'solver':['lbfgs']}# l1 lasso l2 ridge
-lr=LogisticRegression()
-
-We output the GridSearchCV object for logistic regression. We display the best parameters using the data attribute best_params_ and the accuracy on the validation data using the data attribute best_score_.
-
-print("tuned hpyerparameters :(best parameters) ",logreg_cv.best_params_)
-print("accuracy :",logreg_cv.best_score_)
